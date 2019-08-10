@@ -23,7 +23,10 @@ body {
   position: absolute;
   left: 0;
   bottom: -10%;
-  width: 38%; }
+  width: 30%; }
+@media (min-width: 1440px) {
+  .obj-doctor {
+    width: 38%; } }
 @media (max-width: 991.98px) {
   .obj-doctor {
     bottom: 0; } }

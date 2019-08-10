@@ -268,7 +268,7 @@ body {
   100% {
     opacity: 1; } }
 .effect-cursor {
-  animation: effect-cursor 1.5s ease-in 1s infinite; }
+  animation: effect-cursor 1.5s ease-in .3s infinite; }
 
 @keyframes effect-cursor {
   0% {

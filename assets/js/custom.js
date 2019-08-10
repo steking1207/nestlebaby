@@ -1,3 +1,14 @@
+window.addEventListener('DOMContentLoaded', function() {
+    QueryLoader2(document.querySelector("body"), {
+        barColor: "#13358c",
+        backgroundColor: "#fffaeb",
+        percentage: true,
+        barHeight: 1,
+        minimumTime: 200,
+        fadeOutTime: 1000
+    });
+});
+
 $('#fullpage').fullpage({
 //        new fullpage('#fullpage', {
     anchors: ['gamePage'],

@@ -258,13 +258,13 @@ body {
   100% {
     transform: scale(0.95); } }
 .effect-fade {
-  animation: effect-fade .7s alternate infinite ease-in; }
+  animation: effect-fade 1s alternate infinite ease-in; }
 
 @keyframes effect-fade {
   0% {
     opacity: 1; }
   50% {
-    opacity: .7; }
+    opacity: .3; }
   100% {
     opacity: 1; } }
 .effect-cursor {

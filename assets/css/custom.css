@@ -24,11 +24,11 @@ body {
   position: absolute;
   left: 0;
   bottom: -10%;
-  width: 30%; }
-@media (min-width: 1440px) {
+  width: 38%; }
+@media (min-width: 1024px) and (max-width: 1459.98px) {
   .obj-doctor {
-    width: 38%; } }
-@media (max-width: 991.98px) {
+    width: 30%; } }
+@media (max-width: 1023.98px) {
   .obj-doctor {
     bottom: 0; } }
 
@@ -37,7 +37,7 @@ body {
   background-size: 100% 90%;
   border-left: 1px solid #ffce00;
   border-right: 1px solid #ffce00; }
-@media (max-width: 991.98px) {
+@media (max-width: 1023.98px) {
   #fullpage {
     background-size: contain; } }
 
@@ -45,9 +45,19 @@ body {
   padding-top: 50px;
   background: url(../img/title-board.png) center 11% no-repeat;
   background-size: 90%; }
-@media (max-width: 991.98px) {
+@media (max-width: 1023.98px) {
+  #section1 {
+    background-position: center 9%; } }
+@media (max-width: 767.98px) {
   #section1 {
     background-position: center 16%; } }
+
+@media (max-width: 1459.98px) {
+  .slideEnd img {
+    max-height: 640px; } }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .slideEnd img {
+    max-height: 880px; } }
 
 .content {
   position: absolute;
@@ -64,10 +74,10 @@ body {
 .content .ans-zone .ans-right, .content .ans-zone .ans-wrong {
   position: absolute;
   top: 0; }
-@media (max-width: 991.98px) {
+@media (max-width: 1023.98px) {
   .content .ans-zone {
     top: -19%; } }
-@media (max-width: 991.98px) {
+@media (max-width: 1023.98px) {
   .content .ans-zone {
     width: 90%; } }
 
@@ -117,7 +127,7 @@ body {
   display: block;
   width: 85px;
   height: 85px; }
-@media (max-width: 991.98px) {
+@media (max-width: 1023.98px) {
   .protein .ani-aimpoint {
     top: 115px;
     width: 60px;
@@ -127,7 +137,7 @@ body {
   left: 18%;
   top: 170px;
   width: 35%; }
-@media (max-width: 991.98px) {
+@media (max-width: 1023.98px) {
   .protein .ani-waypoint {
     top: 100px; } }
 .protein .ani-protein {
@@ -142,7 +152,7 @@ body {
   width: 5vw;
   height: 5vh;
   margin: -3vw -2.5vh; }
-@media (max-width: 991.98px) {
+@media (max-width: 1023.98px) {
   .protein .ani-protein-touch {
     width: 10vw;
     margin: -10vw -2vh 0; } }
@@ -169,7 +179,7 @@ body {
   right: -25px;
   top: 20px;
   display: block; }
-@media (max-width: 991.98px) {
+@media (max-width: 1023.98px) {
   .protein .ani-slice {
     top: 20px;
     left: 10px;
@@ -202,21 +212,21 @@ body {
   left: 15%;
   top: 50px;
   width: 22%; }
-@media (max-width: 991.98px) {
+@media (max-width: 1023.98px) {
   .babyeat .dots .ani-dots21 {
     left: 35%; } }
 .babyeat .dots .ani-dots31 {
   left: 45%;
   top: 60px;
   width: 40%; }
-@media (max-width: 991.98px) {
+@media (max-width: 1023.98px) {
   .babyeat .dots .ani-dots31 {
     left: 70%; } }
 .babyeat .dots .ani-dots32 {
   left: 45%;
   top: 240px;
   width: 37%; }
-@media (max-width: 991.98px) {
+@media (max-width: 1023.98px) {
   .babyeat .dots .ani-dots32 {
     left: 50%;
     top: 180px; } }
@@ -224,7 +234,7 @@ body {
   left: 25%;
   top: 180px;
   width: 22%; }
-@media (max-width: 991.98px) {
+@media (max-width: 1023.98px) {
   .babyeat .dots .ani-dots22 {
     top: 100px; } }
 .babyeat .ani-babyeat {
@@ -282,7 +292,7 @@ body {
   transition-property: transform, opacity; }
 [data-aos="ani-dot21"].aos-animate {
   transform: rotate(20deg) scale(1) translate3d(-90px, 0, 0); }
-@media (max-width: 991.98px) {
+@media (max-width: 1023.98px) {
   [data-aos="ani-dot21"] {
     transform: rotate(0) scale(1.3) translate3d(-20%, -20%, 0); } }
 
@@ -291,7 +301,7 @@ body {
   transition-property: transform, opacity; }
 [data-aos="ani-dot31"].aos-animate {
   transform: rotate(20deg) scale(1) translate3d(-115px, 0, 0); }
-@media (max-width: 991.98px) {
+@media (max-width: 1023.98px) {
   [data-aos="ani-dot31"] {
     transform: rotate(0) scale(1.3) translate3d(-20%, -20%, 0); } }
 
@@ -300,7 +310,7 @@ body {
   transition-property: transform, opacity; }
 [data-aos="ani-dot32"].aos-animate {
   transform: rotate(-90deg) scale(0.7) translate3d(100px, -100px, 0); }
-@media (max-width: 991.98px) {
+@media (max-width: 1023.98px) {
   [data-aos="ani-dot32"] {
     transform: rotate(-75deg) scale(1) translate3d(50%, -30%, 0); } }
 

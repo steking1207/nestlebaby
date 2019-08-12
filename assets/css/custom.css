@@ -1,6 +1,4 @@
 html, body {
-  overflow: hidden !important;
-  height: 100%;
   background: #fffaeb; }
 
 body {
@@ -8,17 +6,29 @@ body {
   margin: 0 auto !important;
   max-width: 640px; }
 
+[draggable="true"] {
+  /*
+ To prevent user selecting inside the drag source
+*/
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none; }
+
 .obj-doctor {
   position: absolute;
   left: 0;
-  bottom: -10%;
-  width: 38%; }
+  bottom: 0;
+  width: 35%; }
 @media (min-width: 1024px) and (max-width: 1459.98px) {
   .obj-doctor {
-    width: 30%; } }
+    width: 26%; } }
 @media (max-width: 1023.98px) {
   .obj-doctor {
     bottom: 0; } }
+@media screen and (max-height: 640px) {
+  .obj-doctor {
+    width: 26%; } }
 
 #fullpage {
   background: url(../img/bg-board.png) center bottom #f7f0d9 no-repeat;
@@ -28,6 +38,9 @@ body {
 @media (max-width: 1023.98px) {
   #fullpage {
     background-size: contain; } }
+@media screen and (max-height: 700px) {
+  #fullpage {
+    background-size: 100% 90%; } }
 
 #section1 {
   padding-top: 50px;
@@ -249,43 +262,6 @@ body {
   z-index: 1;
   width: 25%; }
 
-.effect-zoom {
-  animation: effect-zoom .7s alternate infinite ease-in; }
-
-@keyframes effect-zoom {
-  0% {
-    transform: scale(1); }
-  100% {
-    transform: scale(0.95); } }
-.effect-fade {
-  animation: effect-fade 1s alternate infinite ease-in; }
-
-@keyframes effect-fade {
-  0% {
-    opacity: 1; }
-  50% {
-    opacity: .3; }
-  100% {
-    opacity: 1; } }
-.effect-cursor {
-  animation: effect-cursor 1.5s ease-in .3s infinite; }
-
-@keyframes effect-cursor {
-  0% {
-    right: 0;
-    top: 30px; }
-  100% {
-    right: 100%;
-    top: 100%; } }
-[draggable="true"] {
-  /*
- To prevent user selecting inside the drag source
-*/
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none; }
-
 [data-aos="ani-dot21"] {
   transform: rotate(0) scale(1.5);
   transform-origin: bottom right;
@@ -320,6 +296,34 @@ body {
 [data-aos="ani-dot22"].aos-animate {
   transform: rotate(90deg) scale(1) translate3d(0, 60px, 0); }
 
+.effect-zoom {
+  animation: effect-zoom .7s alternate infinite ease-in; }
+
+@keyframes effect-zoom {
+  0% {
+    transform: scale(1); }
+  100% {
+    transform: scale(0.95); } }
+.effect-fade {
+  animation: effect-fade 1s alternate infinite ease-in; }
+
+@keyframes effect-fade {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: .3; }
+  100% {
+    opacity: 1; } }
+.effect-cursor {
+  animation: effect-cursor 1.5s ease-in .3s infinite; }
+
+@keyframes effect-cursor {
+  0% {
+    right: 0;
+    top: 30px; }
+  100% {
+    right: 100%;
+    top: 100%; } }
 /*!
  * fullPage 3.0.7
  * https://github.com/alvarotrigo/fullPage.js
@@ -533,7 +537,8 @@ html.fp-enabled, .fp-enabled body {
   height: auto !important; }
 
 .fp-responsive .fp-auto-height-responsive.fp-section, .fp-responsive .fp-auto-height-responsive .fp-slide, .fp-responsive .fp-auto-height-responsive .fp-tableCell {
-  height: auto !important; }
+  height: auto !important;
+  min-height: 800px !important; }
 
 /*Only display content to screen readers*/
 .fp-sr-only {
@@ -1074,3 +1079,10 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
   transform: perspective(2500px) rotateX(100deg); }
 [data-aos='flip-down'].aos-animate {
   transform: perspective(2500px) rotateX(0); }
+
+@media screen and (max-height: 640px) {
+  #fullPage, .section, .slide {
+    min-height: 640px !important; } }
+@media screen and (min-width: 640px) and (max-height: 640px) {
+  #fullPage, .section, .slide {
+    min-height: 800px !important; } }

@@ -1,3 +1,125 @@
+(function($)
+{
+    $.fn.ResizeInIt = function()
+    {
+        var mobile_ratio = 980 / 1463;
+
+        function resizing()
+        {
+            $.b_w = $.Body.width();
+            $.b_h = $.Body.height();
+            if ($.b_w > 980)
+            {
+                $.wrapper.css(
+                {
+                    'width': $.b_h * mobile_ratio + 'px'
+                });
+                $.fixed_limit.css(
+                {
+                    'width': $.b_h * mobile_ratio + 'px'
+                });
+                $.Body.css(
+                {
+                    'font-size': 100 * ($.b_h * mobile_ratio / 980) + '%'
+                });
+            }
+            else
+            {
+                $.wrapper.css(
+                {
+                    'width': 100 + '%'
+                });
+                $.fixed_limit.css(
+                {
+                    'width': 100 + '%'
+                });
+                $.Body.css(
+                {
+                    'font-size': (100 * ($.b_w / 980) /*-(0.14*((980-$.b_w)/980)*100*($.b_w/980))*/ ) + '%'
+                });
+            }
+        }
+        $.Window.resize(resizing).trigger('resize');
+    }
+    $.fn.ComCss = function(property)
+    {
+        var _self = $(this);
+        _self['propObj'] = {};
+        for (x in property)
+        {
+            _self.propObj['-webkit-' + x] = property[x];
+            _self.propObj['-moz-' + x] = property[x];
+            _self.propObj['-ms-' + x] = property[x];
+            _self.propObj[x] = property[x];
+        }
+        _self.css(_self.propObj);
+        /*for(x in _self.propObj){
+            delete _self.propObj[x];
+        }*/
+        delete _self.propObj;
+        property = null;
+        _self = null;
+    }
+})(jQuery);
+
+$(function()
+{
+    $.Body = $('body');
+    $.Window = $(window);
+    $.wrapper = $.Body.find('#wrapper');
+    $.Loading = $.Body.find('div#loading');
+    $.fixed_limit = $.Body.find('.fixed_limit');
+    $.Body.ResizeInIt();
+    if (webMode == "PC")
+    {
+        $.Body.addClass('pc');
+    }
+    else if (webMode == "ANDROID")
+    {
+        $.Body.addClass('android');
+    }
+    if (window.location.href.indexOf('member=true') !== -1)
+    {
+        $.Body.find('.change_href').attr(
+        {
+            'href': 'step_2.aspx?member=true'
+        });
+    }
+    $.Body.find('#scene_base').imagesLoaded()
+        .always(
+            function(instance)
+            {
+                // console.log('all images loaded');
+                $.Loading.velocity(
+                {
+                    'opacity': 0
+                },
+                {
+                    /* Velocity's default options */
+                    duration: 400,
+                    easing: "swing",
+                    queue: "",
+                    begin: undefined,
+                    progress: undefined,
+                    complete: function()
+                    {
+                        $.Loading.css(
+                        {
+                            'display': 'none'
+                        });
+                        $.Body.MainDataInIt();
+                    },
+                    display: undefined,
+                    visibility: undefined,
+                    loop: false,
+                    delay: false,
+                    mobileHA: true
+                });
+            }
+        )
+
+});
+
 window.addEventListener('DOMContentLoaded', function() {
     QueryLoader2(document.querySelector("body"), {
         barColor: "#13358c",

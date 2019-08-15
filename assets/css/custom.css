@@ -96,9 +96,8 @@ body {
   bottom: 50px;
   left: 0;
   padding: 5px;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.5);
-  font-size: 11px; }
+  width: 65%;
+  background: rgba(255, 255, 255, 0.5); }
 
 .fp-slidesContainer {
   width: 100% !important;

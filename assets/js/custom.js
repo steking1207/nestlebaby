@@ -9,6 +9,11 @@ window.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+var delay = 2000; //milliseconds
+var timeoutId;
+var animationIsFinished = false;
+
 $('#fullpage').fullpage({
 //        new fullpage('#fullpage', {
     anchors: ['gamePage'],
@@ -71,6 +76,7 @@ $('#fullpage').fullpage({
             });
             $("#aniSliceTouch").droppable({
                 drop: function( event, ui ) {
+                    $('#aniSlice').hide();
                     $.fn.fullpage.moveTo('gamePage', 'slideAni');
                 },
             });
@@ -87,9 +93,25 @@ $('#fullpage').fullpage({
 //                containment: ".babyeat",
 //                scroll: false
             });
+
             $(".ani-babyeat").droppable({
                 drop: function( event, ui ) {
                     $('#aniWaypoint2').hide();
+
+
+
+//        var curTime = new Date().getTime();
+//        //animating my element
+//        $('#element').addClass('animate');
+//        clearTimeout(timeoutId);
+//        timeoutId = setTimeout(function(){
+//            animationIsFinished = true;
+//            $.fn.fullpage.moveTo('gamePage', 'slideQA');
+//        }, delay);
+//        return animationIsFinished;
+
+
+
                     $.fn.fullpage.moveTo('gamePage', 'slideQA');
                 }
             });
@@ -115,6 +137,9 @@ $(document).on('click', '#btnAni', function () {
 $(document).on('click', '#btnQA', function () {
     $.fn.fullpage.moveTo('gamePage', 'slideEnd');
 });
+//$(document).on('click', '#btnReply', function () {
+//    $.fn.fullpage.moveTo('gamePage', 'slideStart');
+//});
 
 $(".btn-ans").click(function(e) {
     e.preventDefault();

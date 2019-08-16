@@ -79,6 +79,8 @@ body {
 .content .ans-zone .ans-right, .content .ans-zone .ans-wrong {
   position: absolute;
   top: 0; }
+.content .ans-zone .ans-right img, .content .ans-zone .ans-wrong img {
+  width: 100%; }
 @media (max-width: 1023.98px) {
   .content .ans-zone {
     top: -19%; } }
@@ -252,6 +254,12 @@ body {
   right: 25%;
   z-index: 1;
   width: 25%; }
+
+#element {
+  transition: all 2s ease; }
+
+#element.animate {
+  margin-left: 250px; }
 
 [data-aos="ani-dot21"] {
   transform: rotate(0) scale(1.5);

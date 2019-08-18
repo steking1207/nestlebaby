@@ -10,14 +10,14 @@ window.addEventListener('DOMContentLoaded', function() {
 });
 
 
-var delay = 2000; //milliseconds
+var delay = 800; //milliseconds
 var timeoutId;
 var animationIsFinished = false;
 
 $('#fullpage').fullpage({
 //        new fullpage('#fullpage', {
     anchors: ['gamePage'],
-//    slidesNavigation: true,
+    slidesNavigation: true,
     autoScrolling: false,
     fitToSection: false,
     css3: true,
@@ -82,37 +82,37 @@ $('#fullpage').fullpage({
             });
         }
         if(section.anchor == 'gamePage' && destination.index == 3){
-            $(".ani-dots").draggable({
+            $(".ani-dots32").draggable({
                 drag: function() {
                     $('.ani-babyeat').addClass('effect-zoom');
                 },
                 stop: function() {
                     $('.ani-babyeat').removeClass('effect-zoom');
                 },
-//                cursorAt: {top: -150, left: 20},
-//                containment: ".babyeat",
-//                scroll: false
             });
 
             $(".ani-babyeat").droppable({
                 drop: function( event, ui ) {
                     $('#aniWaypoint2').hide();
 
+                    var curTime = new Date().getTime();
+        //animating my element
+//        $('.ani-dots21').addClass('ani-dot21r');
+//                    $('.ani-dots21').fadeOut().animate({'left': '70%'}, {queue: false}, function() {});
+//        $('.ani-dots21').animate({left:"20%"}).animate({bottom:"20%"});
+//        $('.ani-dots21').addClass('ani-dots21r');
+                    $('.ani-dots21').fadeOut().css({"transform" : "translate(200%,30px)", "transition-duration": ".9s"});
+                    $('.ani-dots22').fadeOut().css({"transform" : "translate(200%,-30px)", "transition-duration": ".7s"});
+                    $('.ani-dots31').fadeOut().css({"transform" : "translate(150%,30px)", "transition-duration": ".9s"});
+                    $('.ani-dots32').fadeOut().css({"transform" : "translate(200%,30px)", "transition-duration": ".7s"});
+                    clearTimeout(timeoutId);
+                    timeoutId = setTimeout(function(){
+                        animationIsFinished = true;
+                        $.fn.fullpage.moveTo('gamePage', 'slideQA');
+                    }, delay);
+                    return animationIsFinished;
 
-
-//        var curTime = new Date().getTime();
-//        //animating my element
-//        $('#element').addClass('animate');
-//        clearTimeout(timeoutId);
-//        timeoutId = setTimeout(function(){
-//            animationIsFinished = true;
-//            $.fn.fullpage.moveTo('gamePage', 'slideQA');
-//        }, delay);
-//        return animationIsFinished;
-
-
-
-                    $.fn.fullpage.moveTo('gamePage', 'slideQA');
+//                    $.fn.fullpage.moveTo('gamePage', 'slideQA');
                 }
             });
 		}

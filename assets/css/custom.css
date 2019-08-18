@@ -124,28 +124,27 @@ body {
   cursor: url(../img/cursor-hand.png), auto; }
 
 .protein {
-  position: relative; }
+  position: absolute;
+  background: #f00;
+  width: 100%;
+  height: 100%; }
 .protein .ani-aimpoint {
   position: absolute;
   left: 0;
-  top: 210px;
+  top: 150%;
   z-index: 1;
   display: block;
   width: 85px;
   height: 85px; }
 @media (max-width: 1023.98px) {
   .protein .ani-aimpoint {
-    top: 115px;
     width: 60px;
     height: 60px; } }
 .protein .ani-waypoint {
   position: absolute;
   left: 18%;
-  top: 170px;
+  top: 120%;
   width: 35%; }
-@media (max-width: 1023.98px) {
-  .protein .ani-waypoint {
-    top: 100px; } }
 .protein .ani-protein {
   position: absolute;
   right: 10%;
@@ -210,39 +209,11 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  width: 100%; }
+  width: 100%;
+  height: 100%; }
 .babyeat .dots .ani-dots {
   position: absolute;
   z-index: 2; }
-.babyeat .dots .ani-dots21 {
-  left: 15%;
-  top: 50px;
-  width: 22%; }
-@media (max-width: 1023.98px) {
-  .babyeat .dots .ani-dots21 {
-    left: 35%; } }
-.babyeat .dots .ani-dots31 {
-  left: 45%;
-  top: 60px;
-  width: 40%; }
-@media (max-width: 1023.98px) {
-  .babyeat .dots .ani-dots31 {
-    left: 70%; } }
-.babyeat .dots .ani-dots32 {
-  left: 45%;
-  top: 240px;
-  width: 37%; }
-@media (max-width: 1023.98px) {
-  .babyeat .dots .ani-dots32 {
-    left: 50%;
-    top: 180px; } }
-.babyeat .dots .ani-dots22 {
-  left: 25%;
-  top: 180px;
-  width: 22%; }
-@media (max-width: 1023.98px) {
-  .babyeat .dots .ani-dots22 {
-    top: 100px; } }
 .babyeat .ani-babyeat {
   position: relative;
   z-index: 0;
@@ -261,39 +232,57 @@ body {
 #element.animate {
   margin-left: 250px; }
 
+.ani-dots21 {
+  left: -5%;
+  top: 25%;
+  width: 22%; }
+
 [data-aos="ani-dot21"] {
-  transform: rotate(0) scale(1.5);
+  transform: rotate(20deg) scale(1.5);
   transform-origin: bottom right;
   transition-property: transform, opacity; }
 [data-aos="ani-dot21"].aos-animate {
-  transform: rotate(20deg) scale(1) translate3d(-90px, 0, 0); }
+  transform: rotate(0) scale(1); }
 @media (max-width: 1023.98px) {
   [data-aos="ani-dot21"] {
     transform: rotate(0) scale(1.3) translate3d(-20%, -20%, 0); } }
 
-[data-aos="ani-dot31"] {
-  transform: rotate(0) scale(1.5);
-  transition-property: transform, opacity; }
-[data-aos="ani-dot31"].aos-animate {
-  transform: rotate(20deg) scale(1) translate3d(-115px, 0, 0); }
-@media (max-width: 1023.98px) {
-  [data-aos="ani-dot31"] {
-    transform: rotate(0) scale(1.3) translate3d(-20%, -20%, 0); } }
-
-[data-aos="ani-dot32"] {
-  transform: rotate(-75deg) scale(1.2);
-  transition-property: transform, opacity; }
-[data-aos="ani-dot32"].aos-animate {
-  transform: rotate(-90deg) scale(0.7) translate3d(100px, -100px, 0); }
-@media (max-width: 1023.98px) {
-  [data-aos="ani-dot32"] {
-    transform: rotate(-75deg) scale(1) translate3d(50%, -30%, 0); } }
+.ani-dots22 {
+  left: 5%;
+  top: 55%;
+  width: 22%; }
 
 [data-aos="ani-dot22"] {
-  transform: rotate(145deg) scale(1.2);
+  transform: rotate(145deg) scale(1.2) translate3d(-100%, -70%, 0);
   transition-property: transform, opacity; }
 [data-aos="ani-dot22"].aos-animate {
-  transform: rotate(90deg) scale(1) translate3d(0, 60px, 0); }
+  transform: rotate(90deg) scale(1); }
+
+.ani-dots31 {
+  left: 15%;
+  top: 5%;
+  width: 40%; }
+
+[data-aos="ani-dot31"] {
+  transform: rotate(0) scale(1.5) translate3d(50%, -25%, 0);
+  transition-property: transform, opacity; }
+[data-aos="ani-dot31"].aos-animate {
+  transform: rotate(20deg) scale(0.9); }
+@media (max-width: 1023.98px) {
+  [data-aos="ani-dot31"] {
+    transform: rotate(0) scale(1.3); } }
+
+.ani-dots32 {
+  left: 25%;
+  top: 55%;
+  width: 37%;
+  z-index: 5; }
+
+[data-aos="ani-dot32"] {
+  transform: rotate(-50deg) scale(1.2) translate3d(45%, 50%, 0);
+  transition-property: transform, opacity; }
+[data-aos="ani-dot32"].aos-animate {
+  transform: rotate(0deg) scale(0.7); }
 
 .effect-zoom {
   animation: effect-zoom .7s alternate infinite ease-in; }
@@ -323,6 +312,9 @@ body {
   100% {
     right: 100%;
     top: 100%; } }
+.t-delay {
+  transition-delay: 2s; }
+
 /*!
  * fullPage 3.0.7
  * https://github.com/alvarotrigo/fullPage.js

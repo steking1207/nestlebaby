@@ -17,7 +17,7 @@ var animationIsFinished = false;
 $('#fullpage').fullpage({
 //        new fullpage('#fullpage', {
     anchors: ['gamePage'],
-//    slidesNavigation: true,
+    slidesNavigation: true,
     autoScrolling: false,
     fitToSection: false,
     css3: true,
@@ -101,10 +101,10 @@ $('#fullpage').fullpage({
 //                    $('.ani-dots21').fadeOut().animate({'left': '70%'}, {queue: false}, function() {});
 //        $('.ani-dots21').animate({left:"20%"}).animate({bottom:"20%"});
 //        $('.ani-dots21').addClass('ani-dots21r');
-                    $('.ani-dots21').fadeOut().css({"transform" : "translate(200%,30px)", "transition-duration": ".9s"});
-                    $('.ani-dots22').fadeOut().css({"transform" : "translate(200%,-30px)", "transition-duration": ".7s"});
-                    $('.ani-dots31').fadeOut().css({"transform" : "translate(150%,30px)", "transition-duration": ".9s"});
-                    $('.ani-dots32').fadeOut().css({"transform" : "translate(200%,30px)", "transition-duration": ".7s"});
+                    $('.ani-dots21').css({"transform" : "translate(300%,30px)", "transition-duration": ".9s"}).fadeOut();
+                    $('.ani-dots22').css({"transform" : "translate(300%,-30px)", "transition-duration": ".7s"}).fadeOut();
+                    $('.ani-dots31').css({"transform" : "translate(150%,70%) scale(.5)", "transition-duration": ".7s"}).fadeOut('slow');
+                    $('.ani-dots32').css({"transform" : "translate(300%,30px)", "transition-duration": ".7s"}).fadeOut();
                     clearTimeout(timeoutId);
                     timeoutId = setTimeout(function(){
                         animationIsFinished = true;

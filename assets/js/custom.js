@@ -17,7 +17,7 @@ var animationIsFinished = false;
 $('#fullpage').fullpage({
 //        new fullpage('#fullpage', {
     anchors: ['gamePage'],
-    slidesNavigation: true,
+//    slidesNavigation: true,
     autoScrolling: false,
     fitToSection: false,
     css3: true,
@@ -119,7 +119,7 @@ $('#fullpage').fullpage({
 	}
 
 });
-//$.fn.fullpage.setAllowScrolling(false);
+$.fn.fullpage.setAllowScrolling(false);
 
 //slide click
 $(document).on('click', '#btnStart', function () {
@@ -137,9 +137,7 @@ $(document).on('click', '#btnAni', function () {
 $(document).on('click', '#btnQA', function () {
     $.fn.fullpage.moveTo('gamePage', 'slideEnd');
 });
-//$(document).on('click', '#btnReply', function () {
-//    $.fn.fullpage.moveTo('gamePage', 'slideStart');
-//});
+
 
 $(".btn-ans").click(function(e) {
     e.preventDefault();

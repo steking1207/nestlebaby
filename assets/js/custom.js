@@ -17,7 +17,7 @@ var animationIsFinished = false;
 $('#fullpage').fullpage({
 //        new fullpage('#fullpage', {
     anchors: ['gamePage'],
-    slidesNavigation: true,
+//    slidesNavigation: true,
     autoScrolling: false,
     fitToSection: false,
     css3: true,

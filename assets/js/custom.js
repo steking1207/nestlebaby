@@ -15,7 +15,6 @@ var timeoutId;
 var animationIsFinished = false;
 
 $('#fullpage').fullpage({
-//        new fullpage('#fullpage', {
     anchors: ['gamePage'],
 //    slidesNavigation: true,
     autoScrolling: false,
@@ -96,11 +95,6 @@ $('#fullpage').fullpage({
                     $('#aniWaypoint2').hide();
 
                     var curTime = new Date().getTime();
-        //animating my element
-//        $('.ani-dots21').addClass('ani-dot21r');
-//                    $('.ani-dots21').fadeOut().animate({'left': '70%'}, {queue: false}, function() {});
-//        $('.ani-dots21').animate({left:"20%"}).animate({bottom:"20%"});
-//        $('.ani-dots21').addClass('ani-dots21r');
                     $('.ani-dots21').css({"transform" : "translate(300%,30px)", "transition-duration": ".9s"}).fadeOut();
                     $('.ani-dots22').css({"transform" : "translate(300%,-30px)", "transition-duration": ".7s"}).fadeOut();
                     $('.ani-dots31').css({"transform" : "translate(150%,70%) scale(.5)", "transition-duration": ".7s"}).fadeOut('slow');
